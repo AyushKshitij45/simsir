@@ -11,11 +11,6 @@ def create_table():
     create=str('CREATE TABLE stufftoplot(Day,Suspected,Infected,Recovered)')
     c.execute(create)
         
-# def data_entry():
-#     c.execute('INSERT INTO stufftoplot VALUES(?,?,?,?)',days,S,I,R)
-#     conn.commit()
-#     c.close()
-#     conn.close()
 
 def adjust_rate(contact_rate, day):
     if day > lockdown:
@@ -101,5 +96,5 @@ df.plot(x='day',
         stacked=False)
 
 
-    # As of Dec 31,2020 700000 people were infected and this model predicts 870000 
+# As of Dec 31,2020 700000 people were infected and this model predicts 870000 
 # which is off by just 170000 which means about 0.025%    
